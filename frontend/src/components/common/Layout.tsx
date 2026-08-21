@@ -1,19 +1,7 @@
-import React, { ReactNode } from 'react';
-import { Header } from './Header';
-
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
-      <Header />
-      <main className="flex-1">
-        <div className="mx-auto max-w-7xl px-4 py-6">
-          {children}
-        </div>
-      </main>
-    </div>
-  );
-};
+/**
+ * @fileoverview 공통 레이아웃 프레임 컴포넌트
+ * @description 헤더, 네비게이션바, 푸터 등 글로벌 레이아웃 구조를 정의하는 래퍼입니다
+ * @module components/common/Layout
+ * @author KimsWeb
+ * @created 2026-08-21
+ */

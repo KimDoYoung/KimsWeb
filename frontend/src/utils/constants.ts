@@ -1,24 +1,7 @@
-export const API_ENDPOINTS = {
-  CHAT: '/chat',
-  DOCUMENTS: '/documents',
-  AUTH: '/auth',
-  RAG: '/rag',
-} as const;
-
-export const STREAMING = {
-  SSE: '/api/rag/ask',
-  WEBSOCKET: '/ws/chat',
-} as const;
-
-export const DEFAULT_CONFIG = {
-  MAX_MESSAGE_LENGTH: 4000,
-  MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
-  CHUNK_SIZE: 500,
-  N_RESULTS: 5,
-} as const;
-
-export const SUPPORTED_FILE_TYPES = [
-  '.pdf', '.docx', '.txt', '.md', 
-  '.py', '.java', '.sh', '.json', 
-  '.yaml', '.yml', '.xml'
-] as const;
+/**
+ * @fileoverview 공통 시스템 상수 정의 파일
+ * @description API 타임아웃, 로컬 스토리지 키 등 프로젝트 전반에 공유할 상수를 선언합니다
+ * @module utils/constants
+ * @author KimsWeb
+ * @created 2026-08-21
+ */

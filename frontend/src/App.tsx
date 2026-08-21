@@ -1,4 +1,11 @@
-import React, { useState } from 'react';
+/**
+ * @fileoverview KimsWeb 프론트엔드 메인 진입점 컴포넌트
+ * @description 헬스체크 통신 테스트 등 메인 화면 레이아웃과 뷰 구성을 관리합니다
+ * @module App
+ * @author KimsWeb
+ * @created 2026-08-21
+ */
+import { useState } from 'react';
 import axios from 'axios';
 
 function App() {
