@@ -1,0 +1,21 @@
+package kr.co.kalpa.kimsweb;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+@SpringBootApplication(excludeName = {
+    "org.springframework.cloud.function.context.config.ContextFunctionCatalogAutoConfiguration"
+})
+public class KimsWebApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(KimsWebApplication.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(KimsWebApplication.class, args);
+    }
+}
