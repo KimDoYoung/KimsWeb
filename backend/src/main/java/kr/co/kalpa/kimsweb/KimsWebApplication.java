@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@SpringBootApplication(excludeName = {
-    "org.springframework.cloud.function.context.config.ContextFunctionCatalogAutoConfiguration"
-})
+@SpringBootApplication
 public class KimsWebApplication extends SpringBootServletInitializer {
 
     @Override

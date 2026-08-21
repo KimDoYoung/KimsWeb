@@ -95,6 +95,14 @@ do_run() {
         exit 1
     fi
 
+    # 기존 포트(8080) 점유 프로세스가 있으면 자동 종료
+    local pid
+    pid=$(lsof -t -sTCP:LISTEN -i:8080 || true)
+    if [[ -n "$pid" ]]; then
+        info "기존에 실행 중인 프로세스(PID: $pid)가 감지되어 종료 처리를 진행합니다."
+        do_stop
+    fi
+
     chmod +x "$GRADLEW"
     info "서버 시작 중... (Ctrl+C 로 종료)"
     info "API endpoint: http://localhost:8080"
